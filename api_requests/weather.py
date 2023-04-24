@@ -19,7 +19,7 @@ PARAMETERS = {
     "appid": OWM_API_KEY,
     "exclude": "current,minutely,daily"
 }
-response = requests.get(url=END_POINT, params=PARAMETERS, verify=False)
+response = requests.get(url=END_POINT, params=PARAMETERS)
 response.raise_for_status()
 response_json = response.json()
 response_hourly = response_json["hourly"]
